@@ -4,7 +4,7 @@ import { getAllCmsContent } from "@/lib/cms";
 import { getPublishedStudents } from "@/lib/students";
 import { getPageSectionsConfig } from "@/lib/actions";
 import { SectionRenderer } from "@/components/builder/SectionRenderer";
-import { NetflixSectionRail } from "@/components/navigation/NetflixSectionRail";
+import { NetflixSectionRail, type RailSection } from "@/components/navigation/NetflixSectionRail";
 
 export const metadata: Metadata = {
   title: "CBS Collective — Academic Batch 2026–2028 | Centre for Budget Studies",
@@ -55,7 +55,7 @@ export default async function HomePage() {
       )}
 
       {/* ── NETFLIX-STYLE STICKY SECTION RAIL ──────────────────── */}
-      <NetflixSectionRail />
+      <NetflixSectionRail sections={visibleSections as RailSection[]} />
 
       {/* ── DYNAMIC SECTIONS FROM BUILDER CONFIG ───────────────── */}
       {visibleSections.map((section: any) => (

@@ -12,19 +12,62 @@ interface RailItem {
   badge: string;
 }
 
-const RAIL_SECTIONS: RailItem[] = [
-  { id: "hero", label: "Executive Briefing", shortLabel: "Overview", badge: "01" },
-  { id: "cusat", label: "CUSAT Heritage", shortLabel: "CUSAT", badge: "02" },
-  { id: "programme", label: "M.Sc. Programme", shortLabel: "Programme", badge: "03" },
-  { id: "research", label: "Research Domains", shortLabel: "Research", badge: "04" },
-  { id: "vision-mission", label: "Vision & Mission", shortLabel: "Vision", badge: "05" },
-  { id: "milestones", label: "Milestones", shortLabel: "Milestones", badge: "06" },
-  { id: "faculty", label: "Faculty & Leadership", shortLabel: "Faculty", badge: "07" },
-  { id: "our-batch", label: "2026–2028 Scholars", shortLabel: "Scholars", badge: "08" },
-];
+// Map from section type → anchor id (must match SECTION_ANCHOR_MAP in SectionRenderer)
+const TYPE_TO_ANCHOR: Record<string, string> = {
+  hero: "hero",
+  stats: "stats",
+  about: "about-centre",
+  cusat: "cusat",
+  vision_mission: "vision-mission",
+  curriculum: "curriculum",
+  programme: "programme",
+  faculty: "faculty",
+  students: "our-batch",
+  milestones: "milestones",
+  research: "research",
+};
 
-export function NetflixSectionRail() {
-  const [activeId, setActiveId] = useState<string>("hero");
+// Map from section type → human-readable rail label
+const TYPE_TO_LABEL: Record<string, { label: string; shortLabel: string }> = {
+  hero:           { label: "Executive Briefing",   shortLabel: "Overview"   },
+  stats:          { label: "Key Statistics",        shortLabel: "Stats"      },
+  about:          { label: "About the Centre",      shortLabel: "About"      },
+  cusat:          { label: "About CUSAT",           shortLabel: "CUSAT"      },
+  vision_mission: { label: "Vision & Mission",      shortLabel: "Vision"     },
+  curriculum:     { label: "Curriculum",            shortLabel: "Curriculum" },
+  programme:      { label: "M.Sc. Programme",       shortLabel: "Programme"  },
+  faculty:        { label: "Faculty & Leadership",  shortLabel: "Faculty"    },
+  students:       { label: "2026–2028 Scholars",    shortLabel: "Scholars"   },
+  milestones:     { label: "Milestones",            shortLabel: "Milestones" },
+  research:       { label: "Research Domains",      shortLabel: "Research"   },
+};
+
+export interface RailSection {
+  id: string;
+  type: string;
+  order: number;
+}
+
+interface NetflixSectionRailProps {
+  sections: RailSection[];
+}
+
+export function NetflixSectionRail({ sections }: NetflixSectionRailProps) {
+  // Build rail items from live sections config, preserving order
+  const RAIL_SECTIONS: RailItem[] = sections
+    .sort((a, b) => a.order - b.order)
+    .map((sec, idx) => {
+      const anchor = TYPE_TO_ANCHOR[sec.type] ?? sec.id;
+      const labels = TYPE_TO_LABEL[sec.type] ?? { label: sec.type, shortLabel: sec.type };
+      return {
+        id: anchor,
+        label: labels.label,
+        shortLabel: labels.shortLabel,
+        badge: String(idx + 1).padStart(2, "0"),
+      };
+    });
+
+  const [activeId, setActiveId] = useState<string>(RAIL_SECTIONS[0]?.id ?? "hero");
   const [isVisible, setIsVisible] = useState(false);
   const [isDocked, setIsDocked] = useState(false);
   const railRef = useRef<HTMLDivElement>(null);
@@ -41,7 +84,8 @@ export function NetflixSectionRail() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Track sections via IntersectionObserver
+  // Track sections via IntersectionObserver — re-run when RAIL_SECTIONS changes
+  const railSectionIds = RAIL_SECTIONS.map((s) => s.id).join(",");
   useEffect(() => {
     const sectionIds = RAIL_SECTIONS.map((s) => s.id);
     const observers: IntersectionObserver[] = [];
@@ -64,7 +108,8 @@ export function NetflixSectionRail() {
     });
 
     return () => observers.forEach((obs) => obs.disconnect());
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [railSectionIds]);
 
   // Smooth scroll to section
   const handleJump = (id: string) => {
