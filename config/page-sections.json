@@ -1,0 +1,286 @@
+{
+  "version": 1,
+  "status": "published",
+  "updated_at": "2026-10-28T13:08:19.524Z",
+  "updated_by": "system",
+  "showHeader": true,
+  "showFooter": true,
+  "sections": [
+    {
+      "id": "sec-hero",
+      "type": "hero",
+      "title": "Executive Hero & Briefing",
+      "order": 0,
+      "isHidden": false,
+      "isDeleted": false,
+      "isProtected": true,
+      "layout": {
+        "spacing": "comfortable",
+        "headingSize": "large",
+        "showEyebrow": true,
+        "contentWidth": "wide",
+        "layoutPreset": "hero-executive",
+        "verticalAlign": "center",
+        "horizontalAlign": "left",
+        "mobileTextCenter": false,
+        "mobileStackReverse": false
+      },
+      "content": {
+        "eyebrow": "CENTRE FOR BUDGET STUDIES · CUSAT",
+        "title": "Pioneering Budget Studies & Fiscal Governance",
+        "titleHighlight": "CBS Collective · Batch 2026–2028",
+        "description": "The Centre for Budget Studies (CBS), established in 2012 by Cochin University of Science and Technology (CUSAT), is a pioneering institution dedicated to studying budgetary processes, fiscal management and their implications for governance in India.",
+        "primaryBtnText": "Meet Our Scholars",
+        "primaryBtnLink": "#our-batch",
+        "secondaryBtnText": "Discover CBS",
+        "secondaryBtnLink": "/about",
+        "batchLabel": "Batch 2026–2028",
+        "enrolledCount": "26 Enrolled Scholars",
+        "location": "Kalamassery, Kochi"
+      }
+    },
+    {
+      "id": "sec-stats",
+      "type": "stats",
+      "title": "Key Metrics & Statistics",
+      "order": 1,
+      "isHidden": false,
+      "isDeleted": false,
+      "layout": {
+        "spacing": "compact",
+        "headingSize": "large",
+        "showEyebrow": true,
+        "contentWidth": "wide",
+        "layoutPreset": "three-column-cards",
+        "verticalAlign": "center",
+        "horizontalAlign": "left",
+        "mobileTextCenter": false,
+        "mobileStackReverse": false
+      },
+      "content": {
+        "stat1Value": "26",
+        "stat1Label": "Scholars",
+        "stat1Desc": "Academic Batch 2026–2028 enrolled in the flagship M.Sc. programme.",
+        "stat2Value": "NIRF 32",
+        "stat2Label": "University Category",
+        "stat2Desc": "CUSAT ranked 32nd in university category and 6th among state public universities in India (NIRF 2025).",
+        "stat3Value": "2012",
+        "stat3Label": "CBS Established",
+        "stat3Desc": "Pioneering institution dedicated to budget studies, fiscal management, and public governance."
+      }
+    },
+    {
+      "id": "sec-about",
+      "type": "about",
+      "title": "About the Centre",
+      "order": 2,
+      "isHidden": false,
+      "isDeleted": false,
+      "layout": {
+        "spacing": "comfortable",
+        "headingSize": "large",
+        "showEyebrow": true,
+        "contentWidth": "wide",
+        "layoutPreset": "two-column-split",
+        "verticalAlign": "center",
+        "horizontalAlign": "left",
+        "mobileTextCenter": false,
+        "mobileStackReverse": false
+      },
+      "content": {
+        "eyebrow": "Institutional Mandate",
+        "title": "Advancing Fiscal Governance & Budgetary Science",
+        "description": "As one of the few institutions in India specializing in budget studies, CBS addresses critical gaps in budgeting practices across national, state, and local governance levels.",
+        "paragraph1": "The Centre for Budget Studies (CBS), established in 2012 by Cochin University of Science and Technology (CUSAT), is a pioneering institution dedicated to studying budgetary processes, fiscal management and their implications for governance in India. As one of the few institutions in the country specializing in budget studies, CBS aims to address gaps in budgeting practices at the national, state and local levels.",
+        "paragraph2": "Through its flagship M.Sc. programme, the Centre provides advanced training in quantitative analysis, econometrics and financial technology, emphasizing research excellence and community engagement. Its vision is to establish itself as a Centre of Excellence in teaching, research and community outreach within the next decade.",
+        "sidebarTitle": "CUSAT Institutional Foundation",
+        "sidebarText": "Operating under Cochin University of Science and Technology (reconstituted Feb 1986), NIRF 32nd ranked university with top 1,500 THE world ranking.",
+        "sidebarLinkText": "Learn More on About Page",
+        "sidebarLinkUrl": "/about"
+      }
+    },
+    {
+      "id": "sec-cusat",
+      "type": "cusat",
+      "title": "CUSAT University Heritage & Standing",
+      "order": 3,
+      "isHidden": false,
+      "isDeleted": false,
+      "layout": {
+        "spacing": "comfortable",
+        "headingSize": "large",
+        "showEyebrow": true,
+        "contentWidth": "wide",
+        "layoutPreset": "two-column-split",
+        "verticalAlign": "center",
+        "horizontalAlign": "left",
+        "mobileTextCenter": false,
+        "mobileStackReverse": false
+      },
+      "content": {
+        "eyebrow": "Parent University Heritage",
+        "title": "Cochin University of Science and Technology",
+        "description": "Reconstituted in February 1986 to promote graduate and postgraduate studies and advanced research across applied sciences, technology, industry, commerce, management, and social sciences.",
+        "statRank1": "32nd",
+        "statRank1Label": "NIRF University Rank",
+        "statRank2": "6th",
+        "statRank2Label": "State Public Universities",
+        "statRank3": "50th",
+        "statRank3Label": "NIRF Overall Rank",
+        "statRank4": "Top 1,500",
+        "statRank4Label": "THE World Rankings",
+        "fundingAgencies": "UGC · DST · DBT · MHRD"
+      }
+    },
+    {
+      "id": "sec-programme",
+      "type": "programme",
+      "title": "Flagship M.Sc. Programme",
+      "order": 4,
+      "isHidden": false,
+      "isDeleted": false,
+      "layout": {
+        "spacing": "comfortable",
+        "headingSize": "large",
+        "showEyebrow": true,
+        "contentWidth": "wide",
+        "layoutPreset": "single-column",
+        "verticalAlign": "center",
+        "horizontalAlign": "left",
+        "mobileTextCenter": false,
+        "mobileStackReverse": false
+      },
+      "content": {
+        "eyebrow": "Flagship Postgraduate Program",
+        "degreeName": "M.Sc. Budget Studies",
+        "description": "Through its flagship M.Sc. programme, the Centre provides advanced training in quantitative analysis, econometrics and financial technology, emphasizing research excellence and community engagement.",
+        "duration": "2 Years (4 Semesters)",
+        "intake": "26 Enrolled Scholars",
+        "eligibility": "Bachelor's degree with university entrance qualification in Quantitative Economics, Mathematics, Commerce, or allied disciplines."
+      }
+    },
+    {
+      "id": "sec-research",
+      "type": "research",
+      "title": "Research Focus Domains",
+      "order": 5,
+      "isHidden": false,
+      "isDeleted": false,
+      "layout": {
+        "spacing": "comfortable",
+        "headingSize": "large",
+        "showEyebrow": true,
+        "contentWidth": "wide",
+        "layoutPreset": "four-column-cards",
+        "verticalAlign": "center",
+        "horizontalAlign": "left",
+        "mobileTextCenter": false,
+        "mobileStackReverse": false
+      },
+      "content": {
+        "eyebrow": "Research Domains",
+        "title": "Research Focus & Specialisations",
+        "description": "Key focus areas guiding empirical enquiry and student research thesis projects."
+      }
+    },
+    {
+      "id": "sec-vision-mission",
+      "type": "vision_mission",
+      "title": "Vision & Strategic Mission",
+      "order": 6,
+      "isHidden": false,
+      "isDeleted": false,
+      "layout": {
+        "spacing": "comfortable",
+        "headingSize": "large",
+        "showEyebrow": true,
+        "contentWidth": "wide",
+        "layoutPreset": "two-column-split",
+        "verticalAlign": "center",
+        "horizontalAlign": "left",
+        "mobileTextCenter": false,
+        "mobileStackReverse": false
+      },
+      "content": {
+        "eyebrow": "Guiding Principles",
+        "title": "Vision & Strategic Mission",
+        "vision": "To establish itself as a Centre of Excellence in teaching, research and community outreach within the next decade, positioning itself as a leader in budget studies and fiscal governance in India.",
+        "mission": "CBS is committed to academic scholarship, rigorous research and meaningful social engagement while upholding institutional integrity, openness to knowledge and change, quality education and societal welfare. By fostering a safe environment that encourages freedom of inquiry and continuous improvement, the Centre aims to overcome challenges through strategic planning and innovation, ultimately positioning itself as a leader in budget studies and fiscal governance in India."
+      }
+    },
+    {
+      "id": "sec-milestones",
+      "type": "milestones",
+      "title": "Achievements & Milestones",
+      "order": 7,
+      "isHidden": false,
+      "isDeleted": false,
+      "layout": {
+        "spacing": "comfortable",
+        "headingSize": "large",
+        "showEyebrow": true,
+        "contentWidth": "wide",
+        "layoutPreset": "three-column-cards",
+        "verticalAlign": "center",
+        "horizontalAlign": "left",
+        "mobileTextCenter": false,
+        "mobileStackReverse": false
+      },
+      "content": {
+        "eyebrow": "Milestones & Impact",
+        "title": "Institutional Milestones & Legacy",
+        "description": "Foundational moments defining CUSAT's legacy and the pioneering journey of CBS."
+      }
+    },
+    {
+      "id": "sec-faculty",
+      "type": "faculty",
+      "title": "Academic Leadership & Mentorship",
+      "order": 8,
+      "isHidden": false,
+      "isDeleted": false,
+      "layout": {
+        "spacing": "comfortable",
+        "headingSize": "large",
+        "showEyebrow": true,
+        "contentWidth": "wide",
+        "layoutPreset": "three-column-cards",
+        "verticalAlign": "center",
+        "horizontalAlign": "left",
+        "mobileTextCenter": false,
+        "mobileStackReverse": false
+      },
+      "content": {
+        "eyebrow": "Academic Mentorship",
+        "title": "Faculty & Institutional Leadership",
+        "description": "Distinguished university leaders, senior professors, and research mentors guiding the Academic Batch 2026–2028."
+      }
+    },
+    {
+      "id": "sec-students",
+      "type": "students",
+      "title": "Our Batch (26 Scholars Directory)",
+      "order": 9,
+      "isHidden": false,
+      "isDeleted": false,
+      "isProtected": true,
+      "layout": {
+        "spacing": "spacious",
+        "headingSize": "large",
+        "showEyebrow": true,
+        "contentWidth": "wide",
+        "layoutPreset": "single-column",
+        "verticalAlign": "center",
+        "horizontalAlign": "left",
+        "mobileTextCenter": false,
+        "mobileStackReverse": false
+      },
+      "content": {
+        "eyebrow": "Academic Batch 2026–2028",
+        "title": "Our Batch",
+        "description": "Meet all 26 scholars in Academic Batch 2026–2028 at the Centre for Budget Studies. Browse specialisations, backgrounds, and access verified CVs."
+      }
+    }
+  ],
+  "trash": []
+}

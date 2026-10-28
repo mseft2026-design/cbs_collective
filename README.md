@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# CBS Collective
+
+**Academic website for the Centre for Budget Studies (CBS), Cochin University of Science and Technology (CUSAT). Academic Batch 2026–2028.**
+
+## Tech Stack
+
+- **Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Database**: Supabase PostgreSQL
+- **Auth**: Supabase Auth
+- **Storage**: Supabase Storage
 
 ## Getting Started
 
-First, run the development server:
+### 1. Clone and install
+
+```bash
+git clone <repo-url>
+cd cbs_collective
+npm install
+```
+
+### 2. Configure environment
+
+```bash
+cp .env.example .env.local
+```
+
+Edit `.env.local` with your Supabase credentials.
+
+### 3. Set up Supabase
+
+See [SUPABASE_SETUP.md](./SUPABASE_SETUP.md) for the complete setup guide.
+
+### 4. Run locally
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+app/
+  page.tsx              # Homepage
+  about/page.tsx        # About CBS section
+  students/
+    page.tsx            # Student directory
+    [id]/page.tsx       # Individual student profile
+  admin/
+    login/page.tsx      # Admin login
+    page.tsx            # Admin dashboard
+    students/
+      page.tsx          # Student management
+      new/page.tsx      # Add student
+      [id]/edit/page.tsx # Edit student
 
-## Learn More
+components/
+  layout/               # Navbar, Footer
+  institution/          # About section components
+  students/             # Student card, grid
+  admin/                # Admin UI components
 
-To learn more about Next.js, take a look at the following resources:
+config/
+  institution.ts        # CBS institutional content (edit here)
+  faculty.ts            # Faculty profiles (edit here)
+  curriculum.ts         # Curriculum structure (edit here)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+lib/
+  actions.ts            # Server actions (CRUD, auth)
+  supabase/             # Supabase clients
+  utils.ts              # Utility functions
+  validations.ts        # Form and file validation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+types/
+  student.ts            # Student TypeScript types
 
-## Deploy on Vercel
+supabase/
+  migrations/001_initial.sql  # Database schema + RLS
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Editing Institutional Content
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+All CBS-specific content is in `config/`. Edit these TypeScript files directly — no database needed:
+
+- `config/institution.ts` — Introduction, vision, mission, achievements, research areas
+- `config/faculty.ts` — Faculty profiles
+- `config/curriculum.ts` — Programme details and course list
+
+## Adding / Editing Students
+
+Students are managed through the Admin dashboard at `/admin`. No code changes required.
+
+## Admin Setup
+
+See [SUPABASE_SETUP.md](./SUPABASE_SETUP.md) for admin provisioning instructions.
+
+## Deployment
+
+Deploy to [Vercel](https://vercel.com/) (recommended):
+
+1. Push to GitHub
+2. Import project in Vercel
+3. Add environment variables in Vercel dashboard
+4. Deploy
+
+```bash
+npm run build    # Verify production build locally
+```

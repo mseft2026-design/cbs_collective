@@ -1,0 +1,39 @@
+{
+  "value": {
+    "preset": "cinematic-dark",
+    "colors": {
+      "bg": "#090d16",
+      "bgAlt": "#0d1322",
+      "surface": "#131b2e",
+      "surfaceHover": "#182238",
+      "border": "rgba(255, 255, 255, 0.08)",
+      "text": "#f3f5f8",
+      "textMuted": "#8e9bb0",
+      "accent": "#d4af37",
+      "accentHover": "#e5c158",
+      "secondaryAccent": "#a81d34",
+      "btnPrimaryBg": "#d4af37",
+      "btnPrimaryText": "#090d16",
+      "btnSecondaryBorder": "rgba(212, 175, 55, 0.4)",
+      "btnSecondaryText": "#d4af37"
+    },
+    "typography": {
+      "headingFont": "Inter",
+      "bodyFont": "Inter",
+      "headingWeight": "700",
+      "bodyWeight": "400",
+      "baseFontSize": "16px",
+      "letterSpacing": "tight"
+    },
+    "layout": {
+      "contentWidth": "1280px",
+      "sectionSpacing": "spacious",
+      "cardRadius": "12px",
+      "cardStyle": "glass",
+      "buttonShape": "rounded-lg",
+      "animationIntensity": "subtle"
+    }
+  },
+  "status": "published",
+  "updated_at": "2026-10-14T12:31:54.795Z"
+}
