@@ -75,9 +75,8 @@ export async function Footer() {
               {[
                 { href: "/", label: "Home" },
                 { href: "/about", label: "About Centre (Dossier)" },
-                { href: "/#cusat", label: "CUSAT Heritage & Rankings" },
-                { href: "/#vision-mission", label: "Vision & Strategic Mission" },
-                { href: "/#our-batch", label: "Our Batch (26 Scholars)" },
+                { href: "/#cusat", label: "About CUSAT & Rankings" },
+                { href: "/#our-batch", label: "Our Batch (26 Interns)" },
               ].map((link) => (
                 <li key={link.label}>
                   <Link
