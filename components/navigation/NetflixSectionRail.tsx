@@ -69,7 +69,7 @@ export function NetflixSectionRail({ sections }: NetflixSectionRailProps) {
 
   const [activeId, setActiveId] = useState<string>(RAIL_SECTIONS[0]?.id ?? "hero");
   const [isVisible, setIsVisible] = useState(false);
-  const [isDocked, setIsDocked] = useState(false);
+  const [isDocked, setIsDocked] = useState(true);
   const railRef = useRef<HTMLDivElement>(null);
   const shouldReduceMotion = useReducedMotion();
 
@@ -154,7 +154,7 @@ export function NetflixSectionRail({ sections }: NetflixSectionRailProps) {
             className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#070a13]/95 backdrop-blur-xl border border-[#d4af37]/40 text-[#d4af37] text-xs font-bold uppercase tracking-wider shadow-2xl shadow-black/80 hover:bg-[#d4af37] hover:text-[#070a13] transition-all"
           >
             <Layers size={13} />
-            <span>Show Chapter Rail</span>
+            <span>Show Chapters</span>
             <Maximize2 size={12} />
           </button>
         </motion.div>
