@@ -12,7 +12,7 @@ import { EASINGS, SPRINGS } from "@/lib/motion";
 const NAV_LINKS = [
   { href: "/", label: "Home", id: "" },
   { href: "/about", label: "About CBS", id: "about" },
-  { href: "/#cusat", label: "CUSAT Heritage", id: "cusat" },
+  { href: "/#cusat", label: "About CUSAT", id: "cusat" },
   { href: "/#programme", label: "Programme", id: "programme" },
   { href: "/#faculty", label: "Faculty & Leadership", id: "faculty" },
   { href: "/#our-batch", label: "Our Batch", id: "our-batch" },
@@ -282,7 +282,7 @@ export function Navbar() {
                 }}
                 className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider text-[#070a13] bg-[var(--site-accent)] hover:bg-[#e2c168] transition-all duration-200 shadow-lg shadow-[#d4af37]/20 hover:shadow-xl hover:shadow-[#d4af37]/35 active:scale-[0.98]"
               >
-                <span>Meet Scholars</span>
+                <span>Meet Interns</span>
                 <ArrowUpRight size={13} className="stroke-[2.5]" />
               </Link>
             </motion.div>
@@ -310,7 +310,7 @@ export function Navbar() {
               }}
               className="text-[11px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-md text-[#070a13] bg-[var(--site-accent)]"
             >
-              Scholars
+              Interns
             </Link>
             <motion.button
               type="button"
@@ -428,7 +428,7 @@ export function Navbar() {
                   }}
                   className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-xs font-bold uppercase tracking-wider text-[#070a13] bg-[var(--site-accent)] shadow-md"
                 >
-                  <span>Meet the Scholars</span>
+                  <span>Meet Interns</span>
                   <ArrowUpRight size={14} />
                 </Link>
 
