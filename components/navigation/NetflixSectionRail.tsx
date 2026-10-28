@@ -73,6 +73,9 @@ export function NetflixSectionRail({ sections }: NetflixSectionRailProps) {
   const railRef = useRef<HTMLDivElement>(null);
   const shouldReduceMotion = useReducedMotion();
 
+  const isClickScrollingRef = useRef(false);
+  const clickTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
   // Show rail after scrolling past initial hero billboard
   useEffect(() => {
     function handleScroll() {
@@ -96,12 +99,12 @@ export function NetflixSectionRail({ sections }: NetflixSectionRailProps) {
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
-            if (entry.isIntersecting) {
+            if (entry.isIntersecting && !isClickScrollingRef.current) {
               setActiveId(id);
             }
           });
         },
-        { rootMargin: "-30% 0px -50% 0px" }
+        { rootMargin: "-25% 0px -55% 0px" }
       );
       observer.observe(el);
       observers.push(observer);
@@ -113,6 +116,13 @@ export function NetflixSectionRail({ sections }: NetflixSectionRailProps) {
 
   // Smooth scroll to section
   const handleJump = (id: string) => {
+    // Lock observer from overriding active pill during smooth scrolling
+    isClickScrollingRef.current = true;
+    if (clickTimeoutRef.current) clearTimeout(clickTimeoutRef.current);
+    clickTimeoutRef.current = setTimeout(() => {
+      isClickScrollingRef.current = false;
+    }, 1000);
+
     setActiveId(id);
     if (id === "hero") {
       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -193,7 +203,7 @@ export function NetflixSectionRail({ sections }: NetflixSectionRailProps) {
                         transition={
                           shouldReduceMotion
                             ? { duration: 0 }
-                            : { type: "spring", stiffness: 450, damping: 35 }
+                            : { type: "spring", stiffness: 600, damping: 30 }
                         }
                       />
                     )}
