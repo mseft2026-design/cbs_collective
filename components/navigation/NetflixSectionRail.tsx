@@ -39,7 +39,7 @@ const TYPE_TO_LABEL: Record<string, { label: string; shortLabel: string }> = {
   faculty:        { label: "Faculty & Leadership",  shortLabel: "Faculty"    },
   students:       { label: "2026–2028 Scholars",    shortLabel: "Scholars"   },
   milestones:     { label: "Milestones",            shortLabel: "Milestones" },
-  research:       { label: "Research Domains",      shortLabel: "Research"   },
+  research:       { label: "Research",             shortLabel: "Research"   },
 };
 
 export interface RailSection {
